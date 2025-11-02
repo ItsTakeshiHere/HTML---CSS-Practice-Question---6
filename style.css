@@ -1,0 +1,140 @@
+ /* ======= GLOBAL STYLES ======= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f5f6fa;
+      color: #2f3640;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6c63ff, #836fff);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* ======= PRODUCT GRID ======= */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    article.product {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    article.product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+    }
+
+    .product-info h2 {
+      font-size: 1.1rem;
+      color: #2f3640;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-info p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.8rem;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #27ae60;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .add-to-cart {
+      display: inline-block;
+      text-decoration: none;
+      background: #6c63ff;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background: #554ef3;
+    }
+
+    /* ======= SOLD OUT TAG ======= */
+    .sold-out {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 0, 0, 0.8);
+      color: white;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .product.sold-out::after {
+      content: "SOLD OUT";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-20deg);
+      background: rgba(255, 0, 0, 0.75);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    footer {
+      background: #2f3640;
+      color: #dcdde1;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
